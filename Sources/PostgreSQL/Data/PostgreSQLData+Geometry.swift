@@ -55,6 +55,6 @@ extension PostgreSQLGeometry: PostgreSQLDataConvertible {
 	
 	/// See `PostgreSQLDataConvertible`.
 	public func convertToPostgreSQLData() throws -> PostgreSQLData {
-		return PostgreSQLData(.point, text: description)
+		return PostgreSQLData(.geometry, text: description)
 	}
 }
