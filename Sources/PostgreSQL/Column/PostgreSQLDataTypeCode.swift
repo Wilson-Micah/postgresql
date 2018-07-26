@@ -125,7 +125,7 @@ extension PostgreSQLDataFormat {
         case .json: return "JSON"
         case .pg_node_tree: return "PGNODETREE"
         case .point: return "POINT"
-		case .geometry: return "GEOMETRY"
+		case .geometry: return "GEOMETRY(POINT,4326)"
         case .float4: return "REAL"
         case .float8: return "DOUBLE PRECISION"
         case ._bool: return "BOOLEAN[]"

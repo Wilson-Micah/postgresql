@@ -540,7 +540,7 @@ public struct PostgreSQLDataType: SQLDataType, Equatable {
             case .path: return "PATH"
             case .pgLSN: return "PG_LSN"
             case .point: return "POINT"
-			case .geometry: return "GEOMETRY"
+			case .geometry: return "GEOMETRY(POINT,4326)"
             case .polygon: return "POLYGON"
             case .real: return "REAL"
             case .smallint: return "SMALLINT"
