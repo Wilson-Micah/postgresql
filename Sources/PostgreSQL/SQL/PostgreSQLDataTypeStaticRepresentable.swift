@@ -113,6 +113,6 @@ extension PostgreSQLGeometry: PostgreSQLDataTypeStaticRepresentable, ReflectionD
 	
 	/// See `ReflectionDecodable`.
 	public static func reflectDecoded() throws -> (PostgreSQLGeometry, PostgreSQLGeometry) {
-		return (.init(x: 0, y: 0), .init(x: 1, y: 1))
+		return (.init(longitude: 0, latitude: 0), .init(longitude: 1, latitude: 1))
 	}
 }
