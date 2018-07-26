@@ -48,6 +48,6 @@ extension PostgreSQLPoint: PostgreSQLDataConvertible {
 
     /// See `PostgreSQLDataConvertible`.
     public func convertToPostgreSQLData() throws -> PostgreSQLData {
-        return PostgreSQLData(.point, binary: Data.of(x) + Data.of(y))
+        return PostgreSQLData(.point, text: description)
     }
 }
