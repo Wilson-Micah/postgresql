@@ -12,7 +12,7 @@ extension PostgreSQLConnection {
     ///     - onRow: PostgreSQL row accepting closure to handle results, if any.
     /// - returns: A future that signals query completion.
     public func query(_ query: PostgreSQLQuery, _ onRow: @escaping ([PostgreSQLColumn: PostgreSQLData]) throws -> ()) -> Future<Void> {
-        return self.query(query, resultFormat: .binary, onRow)
+        return self.query(query, resultFormat: .text, onRow)
     }
     
     /// Runs a parameterized `Query`, returning each row of the results to the supplied handler one at a time.
