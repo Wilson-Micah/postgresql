@@ -25,7 +25,7 @@ public struct PostgreSQLGeometry: Codable, Equatable {
 extension PostgreSQLGeometry: CustomStringConvertible {
 	/// See `CustomStringConvertible`.
 	public var description: String {
-		return "SRID=4326;POINT(\(x) \(y)"
+		return "SRID=4326;POINT(\(x) \(y))"
 	}
 }
 
