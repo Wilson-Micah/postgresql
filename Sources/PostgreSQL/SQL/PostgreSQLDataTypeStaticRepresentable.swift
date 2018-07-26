@@ -106,3 +106,13 @@ extension PostgreSQLPoint: PostgreSQLDataTypeStaticRepresentable, ReflectionDeco
         return (.init(x: 0, y: 0), .init(x: 1, y: 1))
     }
 }
+
+extension PostgreSQLGeometry: PostgreSQLDataTypeStaticRepresentable, ReflectionDecodable {
+	/// See `PostgreSQLDataTypeStaticRepresentable`.
+	public static var postgreSQLDataType: PostgreSQLDataType { return .geometry }
+	
+	/// See `ReflectionDecodable`.
+	public static func reflectDecoded() throws -> (PostgreSQLGeometry, PostgreSQLGeometry) {
+		return (.init(x: 0, y: 0), .init(x: 1, y: 1))
+	}
+}

@@ -32,7 +32,7 @@ extension PostgreSQLGeometry: CustomStringConvertible {
 extension PostgreSQLGeometry: PostgreSQLDataConvertible {
 	/// See `PostgreSQLDataConvertible`.
 	public static func convertFromPostgreSQLData(_ data: PostgreSQLData) throws -> PostgreSQLGeometry {
-		guard case .point = data.type else {
+		guard case .geometry = data.type else {
 			throw PostgreSQLError.decode(self, from: data)
 		}
 		switch data.storage {
