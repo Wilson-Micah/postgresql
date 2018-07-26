@@ -214,6 +214,11 @@ public struct PostgreSQLDataType: SQLDataType, Equatable {
     public static var point: PostgreSQLDataType {
         return .init(.point)
     }
+	
+	/// geometric geometry
+	public static var geometry: PostgreSQLDataType {
+		return .init(.geometry)
+	}
     
     /// closed geometric path on a plane
     public static var polygon: PostgreSQLDataType {
@@ -429,6 +434,8 @@ public struct PostgreSQLDataType: SQLDataType, Equatable {
         
         /// geometric point on a plane
         case point
+		
+		case geometry
         
         /// closed geometric path on a plane
         case polygon
@@ -533,6 +540,7 @@ public struct PostgreSQLDataType: SQLDataType, Equatable {
             case .path: return "PATH"
             case .pgLSN: return "PG_LSN"
             case .point: return "POINT"
+			case .geometry: return "GEOMETRY"
             case .polygon: return "POLYGON"
             case .real: return "REAL"
             case .smallint: return "SMALLINT"
